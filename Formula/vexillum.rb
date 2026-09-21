@@ -5,20 +5,21 @@
 class Vexillum < Formula
   desc "CLI orchestrator for code agents"
   homepage "https://github.com/isaias-alt/vexillum"
-  version "0.1.0"
+  version "0.1.1"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.0/vexillum_0.1.0_darwin_amd64.tar.gz"
-      sha256 "bdd08d1810637af5c3942b570aea59316ee88438e3c2449292adffd72f40a6df"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.1/vexillum_0.1.1_darwin_amd64.tar.gz"
+      sha256 "d6c06ad0d867958f776194146329e2cd1106edb67deb66cab3e7e858eb3663db"
 
       define_method(:install) do
         bin.install "vexillum"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.0/vexillum_0.1.0_darwin_arm64.tar.gz"
-      sha256 "156c17c16a60fc8605fc63786bfda7f8ae636f4aad856bac0a1d8cbb4cd1c000"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.1/vexillum_0.1.1_darwin_arm64.tar.gz"
+      sha256 "4bc30eae160fb045536478ca589989544c88daa347ff1673a118982975416f06"
 
       define_method(:install) do
         bin.install "vexillum"
@@ -28,15 +29,15 @@ class Vexillum < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.0/vexillum_0.1.0_linux_amd64.tar.gz"
-      sha256 "d7424ba383d7681748f3ca039987e61a1c09e194f792a3cabbbe6882f5781eb3"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.1/vexillum_0.1.1_linux_amd64.tar.gz"
+      sha256 "c92d8751a1ae16403365e565b0924e9ae6c28f2ce6affc25e75f1ac34da1db4c"
       define_method(:install) do
         bin.install "vexillum"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.0/vexillum_0.1.0_linux_arm64.tar.gz"
-      sha256 "618fa907ae35221561030691dbecb37e3aed23266af5a623fcfa9d93801976f9"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.1.1/vexillum_0.1.1_linux_arm64.tar.gz"
+      sha256 "47da02536d0cb832c504b5fa9f4306fb974aa51ad39702a27d8eb95c35dc0eac"
       define_method(:install) do
         bin.install "vexillum"
       end
