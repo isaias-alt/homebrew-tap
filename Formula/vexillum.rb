@@ -5,13 +5,13 @@
 class Vexillum < Formula
   desc "CLI orchestrator for code agents"
   homepage "https://github.com/isaias-alt/vexillum"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.0/vexillum_0.3.0_darwin_amd64.tar.gz"
-      sha256 "544b71095fa52c708527239253eda734f45b48d47b9d1239b2ccfd173172871e"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_darwin_amd64.tar.gz"
+      sha256 "71002d736285bcfaf38824ada4ea784acdc97f9a2584fbb2ce16eca237d42c40"
 
       define_method(:install) do
         bin.install "vx"
@@ -19,8 +19,8 @@ class Vexillum < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.0/vexillum_0.3.0_darwin_arm64.tar.gz"
-      sha256 "54b5d30ae3bda809041a89eaeda7c316bc720d3631e2f6024f0448899f27e60b"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_darwin_arm64.tar.gz"
+      sha256 "42512a905e134d98844a8cd6906897601d472f22caa29e03732f04b0a283a6a6"
 
       define_method(:install) do
         bin.install "vx"
@@ -31,16 +31,16 @@ class Vexillum < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.0/vexillum_0.3.0_linux_amd64.tar.gz"
-      sha256 "d7e6eab5897fb38c6206ed63f79ef7f29f9b20111152cc0d34ca4e1ccf783832"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_linux_amd64.tar.gz"
+      sha256 "cf3124327605acde7499230beaf542e900303c3de61a9e0add90da93c30276ab"
       define_method(:install) do
         bin.install "vx"
         doc.install "LICENSE", "THIRD-PARTY-NOTICES.md"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.0/vexillum_0.3.0_linux_arm64.tar.gz"
-      sha256 "c36fec877ec31513575effab30e35ffb3fa3813ef1837420d2541ed32f0952bb"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_linux_arm64.tar.gz"
+      sha256 "8891ac8744bca8978e1083246184a84423f3b211aa9e76c851bb75d1c049a34d"
       define_method(:install) do
         bin.install "vx"
         doc.install "LICENSE", "THIRD-PARTY-NOTICES.md"
@@ -50,7 +50,7 @@ class Vexillum < Formula
 
   def caveats
     <<~EOS
-      vx needs Claude Code (logged in) and herdr installed.
+      vx needs Claude Code (logged in) and herdr installed (running from the Herdr app is experimental, see the docs).
       Run `vx init` inside a git repository to set it up.
       Then run `vx doctor` to check your environment.
       Docs: https://vx.lucasco.dev
