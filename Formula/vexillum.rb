@@ -5,13 +5,13 @@
 class Vexillum < Formula
   desc "CLI orchestrator for code agents"
   homepage "https://github.com/isaias-alt/vexillum"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_darwin_amd64.tar.gz"
-      sha256 "71002d736285bcfaf38824ada4ea784acdc97f9a2584fbb2ce16eca237d42c40"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.2/vexillum_0.3.2_darwin_amd64.tar.gz"
+      sha256 "a447a8cbf2516223010a39e3b784231d1d9dfb69a031079d4a02d56ba71ca4e9"
 
       define_method(:install) do
         bin.install "vx"
@@ -19,8 +19,8 @@ class Vexillum < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_darwin_arm64.tar.gz"
-      sha256 "42512a905e134d98844a8cd6906897601d472f22caa29e03732f04b0a283a6a6"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.2/vexillum_0.3.2_darwin_arm64.tar.gz"
+      sha256 "ceeb3c780096752744f1a16bfba1779cca6cf9c12a829f0afd3b8a85ce76ecc3"
 
       define_method(:install) do
         bin.install "vx"
@@ -31,16 +31,16 @@ class Vexillum < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_linux_amd64.tar.gz"
-      sha256 "cf3124327605acde7499230beaf542e900303c3de61a9e0add90da93c30276ab"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.2/vexillum_0.3.2_linux_amd64.tar.gz"
+      sha256 "d825a5c88dc0185855d878d51150be697d4d5fffd8dcc2589d1b3a5e2f3d9bde"
       define_method(:install) do
         bin.install "vx"
         doc.install "LICENSE", "THIRD-PARTY-NOTICES.md"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.1/vexillum_0.3.1_linux_arm64.tar.gz"
-      sha256 "8891ac8744bca8978e1083246184a84423f3b211aa9e76c851bb75d1c049a34d"
+      url "https://github.com/isaias-alt/vexillum/releases/download/v0.3.2/vexillum_0.3.2_linux_arm64.tar.gz"
+      sha256 "1d6deb1817e63e178cdc4a04f0e545f0acd2caccaec232b4155dfa0bf5f83b48"
       define_method(:install) do
         bin.install "vx"
         doc.install "LICENSE", "THIRD-PARTY-NOTICES.md"
